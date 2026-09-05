@@ -64,5 +64,10 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-TripleW Ltd. is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/3plw
+TripleW Ltd. (Belgian operating entity TripleW NV) is an industrial biotechnology and specialty-chemicals company founded in 2016, headquartered in Antwerpen, Belgium, with a US office in Shorewood, Wisconsin and R&D in Israel and Belgium. Its patented process converts food waste into pure lactic acid, sold under the Circulac brand and as a building block of PLA bioplastic; the same process chemically recycles discarded PLA back into feedstock.
+
+TripleW sells industrial chemical product and engineering services, not software. As of 2026-09-05 it publishes no developer program, no public API, no SDK and no machine-readable API contract: every REST/GraphQL/MCP/agent-card and `llms.txt` path probed on `www.triplew.co` and `triplew.co` returns a hard 404 (verified against a control path), and no `api.`/`docs.`/`developer.` subdomain resolves. See `x-coverage` in `apis.yml` for the probe evidence.
+
+- Website: https://www.triplew.co/
+- Contact: https://www.triplew.co/contact
+- Secondary-market listing: https://equityzen.com/company/3plw

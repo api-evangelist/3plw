@@ -1,8 +1,18 @@
 aid: 3plw
 name: TripleW Ltd.
-description: 'TripleW Ltd. is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'TripleW Ltd. (Belgian operating entity TripleW NV) is an industrial biotechnology
+  and specialty-chemicals company founded in 2016, headquartered at Innovatiestraat 1, 2030
+  Antwerpen, Belgium, with a US office in Shorewood, Wisconsin and R&D split between Israel and
+  Belgium. Its patented process treats food waste as a third-generation renewable feedstock:
+  hydrolysis, fermentation and purification yield pure lactic acid, sold under the Circulac brand
+  in grades for personal care, home care, food and beverage and industrial use, and as the building
+  block of polylactic acid (PLA) bioplastic. The same process chemically recycles discarded PLA back
+  into feedstock, and can be installed inside existing waste-management infrastructure. Its flagship
+  commercial Circulac facility is at the Port of Antwerp. TripleW sells industrial chemical product
+  and engineering services, not software: no developer program, no public API, and no
+  machine-readable API contract of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/3plw/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/6509994d0ba4c9cac56b32c0/65b77561caea175779edc0ac_Webclip.jpg
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +22,14 @@ created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Chemicals
+- Industrial Biotechnology
+- Bioplastics
+- Lactic Acid
+- Food Waste
+- Circular Economy
+- Cleantech
+- Manufacturing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,55 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/3plw-domain-security.yml
 - type: Website
+  url: https://www.triplew.co/
+- type: Support
+  url: https://www.triplew.co/contact
+- type: LinkedIn
+  url: https://www.linkedin.com/company/triplew-ltd/
+- type: SecondaryMarket
   url: https://equityzen.com/company/3plw
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    TripleW is an industrial biotechnology and specialty-chemicals manufacturer that sells
+    Circulac-brand lactic acid and PLA feedstock made from food waste, and its entire public
+    surface is a nine-page Webflow marketing site (about, products, valorize-your-waste,
+    closed-loop-plastics, port-of-antwerp-flagship, press, contact) whose only calls to action
+    are info@triplew.co and sales@triplew.co — there is no developer, docs, portal or
+    integration link anywhere in the nav or footer, every REST/GraphQL/MCP/agent-card and
+    llms.txt path probed on both www.triplew.co and triplew.co returns a hard Webflow 404
+    (confirmed against a random control path returning the same 906-byte 404 body), and
+    api./docs./developer.triplew.co do not resolve in DNS at all.
+  evidence:
+  - url: https://www.triplew.co/
+    status: 200
+  - url: https://www.triplew.co/openapi.json
+    status: 404
+  - url: https://www.triplew.co/swagger.json
+    status: 404
+  - url: https://www.triplew.co/api-docs
+    status: 404
+  - url: https://www.triplew.co/llms.txt
+    status: 404
+  - url: https://www.triplew.co/developers
+    status: 404
+  - url: https://www.triplew.co/.well-known/agent-card.json
+    status: 404
+  - url: https://www.triplew.co/.well-known/agent.json
+    status: 404
+  - url: https://www.triplew.co/.well-known/api-catalog
+    status: 404
+  - url: https://triplew.co/.well-known/security.txt
+    status: 404
+  - url: https://www.triplew.co/zz-api-evangelist-control-9f3a
+    status: 404
+  checked: '2026-09-05'

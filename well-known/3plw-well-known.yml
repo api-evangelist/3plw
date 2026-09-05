@@ -1,0 +1,64 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Direct HTTP probes of the five named /.well-known/ paths on every host this record knows.
+  TripleW publishes no API, so there are no baseURL or OpenAPI servers[] hosts to probe; the
+  only hosts are the corporate web site (Webflow-hosted) and its apex. No path returned a
+  document. A control path (/.well-known/zz-control-9f3a) also returned 404 with an 88-byte
+  body, confirming these are true absences and not a catch-all answering 404 or 200 for
+  everything.
+note: >-
+  Every probed path 404s, so NO WellKnown or SecurityTxt pointer is emitted in apis.yml. This
+  file records a measured absence, not a served surface.
+hosts:
+- host: www.triplew.co
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: triplew.co
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+control:
+  url: https://www.triplew.co/.well-known/zz-control-9f3a
+  status: 404
+  bytes: 88
+checked: '2026-09-05'
