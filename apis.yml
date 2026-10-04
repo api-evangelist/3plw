@@ -1,5 +1,5 @@
 aid: 3plw
-name: TripleW Ltd.
+name: TripleW
 description: 'TripleW Ltd. (Belgian operating entity TripleW NV) is an industrial biotechnology
   and specialty-chemicals company founded in 2016, headquartered at Innovatiestraat 1, 2030
   Antwerpen, Belgium, with a US office in Shorewood, Wisconsin and R&D split between Israel and
@@ -89,3 +89,4 @@ x-coverage:
   - url: https://www.triplew.co/zz-api-evangelist-control-9f3a
     status: 404
   checked: '2026-09-05'
+x-legal-name: TripleW Ltd.
